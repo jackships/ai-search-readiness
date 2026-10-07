@@ -1,0 +1,110 @@
+{
+  "_note": "Robots.txt product tokens checked by ai-search-readiness. purpose: 'search' = builds an index used to show and cite pages in AI answers; 'user' = fetches a page because a user asked the assistant to; 'training' = collects data for model training (blocking it does not remove you from AI search answers); 'search-engine' = classic web search crawler that AI features also build on. Descriptions summarize each operator's own documentation; check the linked page before relying on details.",
+  "crawlers": [
+    {
+      "token": "Googlebot",
+      "operator": "Google",
+      "purpose": "search-engine",
+      "description": "Google Search crawler. Google's AI Overviews and AI Mode use pages from the normal Search index, so blocking it removes you from those too.",
+      "docs": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers"
+    },
+    {
+      "token": "Bingbot",
+      "operator": "Microsoft",
+      "purpose": "search-engine",
+      "description": "Bing Search crawler. Microsoft Copilot answers are grounded in the Bing index.",
+      "docs": "https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0"
+    },
+    {
+      "token": "OAI-SearchBot",
+      "operator": "OpenAI",
+      "purpose": "search",
+      "description": "Crawls pages so they can be surfaced and linked in ChatGPT search results. Not used for training.",
+      "docs": "https://platform.openai.com/docs/bots"
+    },
+    {
+      "token": "ChatGPT-User",
+      "operator": "OpenAI",
+      "purpose": "user",
+      "description": "Fetches a page when a ChatGPT user (or a GPT action) asks for it. Not used for training.",
+      "docs": "https://platform.openai.com/docs/bots"
+    },
+    {
+      "token": "GPTBot",
+      "operator": "OpenAI",
+      "purpose": "training",
+      "description": "Collects content that may be used to train OpenAI's foundation models.",
+      "docs": "https://platform.openai.com/docs/bots"
+    },
+    {
+      "token": "Claude-SearchBot",
+      "operator": "Anthropic",
+      "purpose": "search",
+      "description": "Crawls pages to improve the quality of search results in Claude.",
+      "docs": "https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+    },
+    {
+      "token": "Claude-User",
+      "operator": "Anthropic",
+      "purpose": "user",
+      "description": "Fetches a page when a Claude user asks a question that needs it.",
+      "docs": "https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+    },
+    {
+      "token": "ClaudeBot",
+      "operator": "Anthropic",
+      "purpose": "training",
+      "description": "Collects public web content that may be used to train Anthropic's models.",
+      "docs": "https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+    },
+    {
+      "token": "PerplexityBot",
+      "operator": "Perplexity",
+      "purpose": "search",
+      "description": "Indexes pages so they can be surfaced and linked in Perplexity answers. Perplexity says it is not used to train foundation models.",
+      "docs": "https://docs.perplexity.ai/guides/bots"
+    },
+    {
+      "token": "Perplexity-User",
+      "operator": "Perplexity",
+      "purpose": "user",
+      "description": "Fetches a page in response to a user's question. Perplexity documents that it generally ignores robots.txt because the fetch is user-requested.",
+      "docs": "https://docs.perplexity.ai/guides/bots"
+    },
+    {
+      "token": "Google-Extended",
+      "operator": "Google",
+      "purpose": "training",
+      "description": "A robots.txt control token, not a separate crawler (crawling is done by Google's normal user agents). Controls whether content may be used for Gemini models; Google says it does not affect Google Search ranking or inclusion.",
+      "docs": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers#google-extended"
+    },
+    {
+      "token": "Applebot-Extended",
+      "operator": "Apple",
+      "purpose": "training",
+      "description": "A robots.txt control token (Applebot does the crawling). Opts content out of training Apple's generative AI models; pages can still appear in Siri and Spotlight results.",
+      "docs": "https://support.apple.com/en-us/119829"
+    },
+    {
+      "token": "CCBot",
+      "operator": "Common Crawl",
+      "purpose": "training",
+      "description": "Builds the open Common Crawl web archive, which is widely used as AI training data.",
+      "docs": "https://commoncrawl.org/ccbot"
+    },
+    {
+      "token": "Bytespider",
+      "operator": "ByteDance",
+      "purpose": "training",
+      "description": "ByteDance's crawler, widely reported to collect data for training its LLMs.",
+      "docs": null
+    },
+    {
+      "token": "Meta-ExternalAgent",
+      "operator": "Meta",
+      "purpose": "training",
+      "description": "Crawls the web for use cases such as training Meta's AI models and improving products by indexing content directly.",
+      "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers"
+    }
+  ]
+}

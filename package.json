@@ -1,0 +1,47 @@
+{
+  "name": "ai-search-readiness",
+  "version": "0.1.0",
+  "description": "Zero-dependency CLI that checks whether AI search crawlers (ChatGPT, Perplexity, Claude, Gemini) can read and cite your site.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "ai-search-readiness": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ai-search",
+    "geo",
+    "generative-engine-optimization",
+    "llms-txt",
+    "robots-txt",
+    "gptbot",
+    "seo",
+    "cli"
+  ],
+  "author": "Jack Ships",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackships/ai-search-readiness.git"
+  },
+  "homepage": "https://github.com/jackships/ai-search-readiness#readme",
+  "bugs": {
+    "url": "https://github.com/jackships/ai-search-readiness/issues"
+  }
+}
